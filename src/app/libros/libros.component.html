@@ -1,0 +1,35 @@
+<!--
+<div >
+    <div class="card col-lg-2 col-md-2 container" style="border-color:black;"  *ngFor="let item of nombreLista" >
+        
+        <div class="card-title">{{item.nombre}}</div>    
+        <img class= portada  [src]=item.imagen>
+        <div class="card-info">Autor: {{item.autor}}</div>  
+        <div class="card-info">Páginas: {{item.paginas}}</div>  
+        
+    </div>
+    
+    
+</div>
+
+-->
+<div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4" style="margin-bottom: 2%; margin-top:2%" *ngFor="let item of nombreLista">
+        <div class="card text-center">
+          <div class="card-header d-flex justity-content-between align-items-center">
+            {{item.nombre}}
+          </div>
+          <img [src]=item.imagen class="card-img-top" id="imagenProd" />
+          <div class="card-header  d-flex justity-content-between align-items-center">
+            Autor: {{item.autor}}
+            <br>
+            Páginas: {{item.paginas}}
+
+            
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="starter-template">
+        <div class="row">
+            <div class="col-md-12 mt-5">
+                <form [formGroup]="quejas" (ngSubmit)="onSubmit()" [style.display]="isVisible ? 'block' : 'none'">
+
+                    <div class="form-group">
+                        <label for="nombrecompleto">Nombre Completo:</label>
+                        <input type="text" formControlName="nombrecompleto" class="form-control" placeholder="Ingrese aquí su nombre completo..."
+                            [ngClass]="{ 'is-invalid': submitted && f.nombrecompleto.errors }" />
+                        <div *ngIf="submitted && f.nombrecompleto.errors" class="invalid-feedback">
+                            <div *ngIf="f.nombrecompleto.errors.required">Por favor, ingrese su nombre completo</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pais"> País: </label>
+                        <select class="form-control" formControlName="pais"
+                            [ngClass]="{ 'is-invalid': submitted && f.pais.errors }">
+                            <option value="">Seleccionar País...</option>
+                            <option value="pais1">Argentina</option>
+                            <option value="pais2">Bolivia</option>
+                            <option value="pais3">Brazil</option>
+                            <option value="pais4">Chile</option>
+                            <option value="pais5">Colombia</option>
+                            <option value="pais6">Ecuador</option>
+                            <option value="pais7">Paraguay</option>
+                            <option value="pais8">Perú</option>
+                            <option value="pais9">Uruguay</option>
+                            <option value="pais10">Venezuela</option>
+                        </select>
+                        <div *ngIf="submitted && f.pais.errors" class="invalid-feedback">
+                            <div *ngIf="f.pais.errors.required">Por favor, seleccione su país</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="observacion">Observación:</label>
+                        <textarea class="form-control" formControlName="observacion" rows="3"
+                            [ngClass]="{ 'is-invalid': submitted && f.observacion.errors }" maxlength="150"
+                            placeholder="Escriba aquí su observación..."> </textarea>
+                        <div *ngIf="submitted && f.observacion.errors" class="invalid-feedback">
+                            <div *ngIf="f.observacion.errors.required">Debe ingresar observación.</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button style="margin: 10px" class="btn btn-primary"> Enviar </button>
+                    </div>
+                </form>
+                {{htmlStr}}
+            </div>
+        </div>
+    </div>
+</div>

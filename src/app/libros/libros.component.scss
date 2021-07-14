@@ -1,0 +1,26 @@
+.portada{
+    border-style: solid;
+    border-color: black;
+}
+
+.card-header {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+}
+
+#imagenProd
+{
+    display: block;
+    height: 300px;
+    width: 300px;
+    margin-left: auto;
+    margin-right:auto;
+    padding: 2px;
+}
+
+.container{
+    justify-content: center;
+    text-align: center;
+}
